@@ -134,7 +134,7 @@ function Index() {
           </div>
 
           {/* vertical label */}
-          <span className="absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 rotate-90 text-[10px] uppercase tracking-[0.4em] text-muted-foreground md:block">
+          <span className="select-none absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 rotate-90 text-[10px] uppercase tracking-[0.4em] text-muted-foreground md:block">
             scroll ↓
           </span>
         </motion.div>
@@ -149,7 +149,9 @@ function Index() {
           01
         </span>
         <Reveal className="relative grid gap-12 md:grid-cols-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary md:col-span-3">(About)</p>
+          <p className="select-none text-xs uppercase tracking-[0.3em] text-primary md:col-span-3">
+            (About)
+          </p>
           <div className="md:col-span-8">
             <p className="font-serif text-4xl leading-[1.1] md:text-6xl">
               I'm Antony, a first-year <em className="text-primary">BCA</em> student. Curious about
@@ -177,7 +179,9 @@ function Index() {
           02
         </span>
         <Reveal className="relative grid gap-12 md:grid-cols-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary md:col-span-3">(Contact)</p>
+          <p className="select-none text-xs uppercase tracking-[0.3em] text-primary md:col-span-3">
+            (Contact)
+          </p>
           <div className="md:col-span-9">
             <p className="font-serif text-3xl italic text-muted-foreground md:text-4xl">
               Say hello —
@@ -190,7 +194,7 @@ function Index() {
               <span className="block h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full" />
             </a>
 
-            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <div className="select-none mt-8 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
               {SOCIALS.map((social) => (
                 <a
                   key={social.name}
@@ -215,7 +219,7 @@ function Index() {
 
       <footer className="flex justify-between border-t px-6 py-6 text-[10px] uppercase tracking-[0.3em] text-muted-foreground md:px-12">
         <span>© 2026 Antony Johny</span>
-        <a href="#" className="transition-colors hover:text-primary">
+        <a href="#" className="select-none transition-colors hover:text-primary">
           Back to top ↑
         </a>
       </footer>
