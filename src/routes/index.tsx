@@ -101,11 +101,12 @@ function Index() {
           <motion.img
             src={me}
             alt="Antony Johny"
+            draggable={false}
             style={{ y: portraitY, scale: portraitScale }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: reduceMotion ? 0 : 0.9 }}
-            className="relative z-10 h-[88%] w-auto max-w-full origin-bottom object-contain object-bottom"
+            className="pointer-events-none relative z-10 h-[88%] w-auto max-w-full select-none origin-bottom object-contain object-bottom"
           />
 
           {/* front outline text, sits over the cutout */}
