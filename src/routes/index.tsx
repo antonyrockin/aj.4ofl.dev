@@ -7,12 +7,12 @@ import { ConfettiBurst } from "@/components/confetti-burst";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Antony Johny — Portfolio" },
+      { title: "Antony Johny" },
       {
         name: "description",
-        content: "Antony Johny — first-year BCA student, learning by making things for the web.",
+        content: "Antony Johny, first-year BCA student learning and building for the web.",
       },
-      { property: "og:title", content: "Antony Johny — Portfolio" },
+      { property: "og:title", content: "Antony Johny" },
       { property: "og:description", content: "BCA student building things on the web." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -22,6 +22,11 @@ export const Route = createFileRoute("/")({
 });
 
 const EMAIL = "aj@4ofl.dev";
+const SOCIALS = [
+  { name: "GitHub", href: "https://github.com/antonyrockin" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/antony-johny-6770b9404" },
+  { name: "Instagram", href: "https://instagram.com/_an.tonyy_johnyy_" },
+] as const;
 
 function Reveal({ children, className }: { children: ReactNode; className?: string }) {
   const reduceMotion = useReducedMotion();
