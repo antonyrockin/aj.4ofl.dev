@@ -59,41 +59,76 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-mono);
   }
-  * { letter-spacing: 0; }
-  ::selection { background: var(--primary); color: var(--primary-foreground); }
+  * {
+    letter-spacing: 0;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
 }
 
-.hero-name { font-size: 210px; }
-.hero-surname { font-size: 150px; }
-.contact-email { font-size: 96px; }
+.hero-name {
+  font-size: clamp(140px, min(18vw, 24vh), 210px);
+}
+.hero-surname {
+  font-size: clamp(100px, min(13vw, 17vh), 150px);
+}
+.contact-email {
+  font-size: 96px;
+}
 
 @media (min-width: 1024px) {
-  .hero-name { font-size: 280px; }
-  .hero-surname { font-size: 190px; }
+  .hero-name {
+    font-size: clamp(180px, min(19vw, 26vh), 280px);
+  }
+  .hero-surname {
+    font-size: clamp(120px, min(14vw, 18vh), 190px);
+  }
 }
 
 @media (max-width: 767px) {
-  .hero-name { font-size: 108px; }
-  .hero-surname { font-size: 92px; }
-  .contact-email { font-size: 54px; }
+  .hero-name {
+    font-size: clamp(88px, min(24vw, 16vh), 108px);
+  }
+  .hero-surname {
+    font-size: clamp(76px, min(20vw, 14vh), 92px);
+  }
+  .contact-email {
+    font-size: 54px;
+  }
 }
 
 @media (max-width: 359px) {
-  .hero-name { font-size: 88px; }
-  .hero-surname { font-size: 76px; }
-  .contact-email { font-size: 46px; }
+  .hero-name {
+    font-size: 88px;
+  }
+  .hero-surname {
+    font-size: 76px;
+  }
+  .contact-email {
+    font-size: 46px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .animate-rise { animation: none; }
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise {
+    animation: none;
+  }
 }
 
 @utility grain {
@@ -118,8 +153,14 @@
 }
 
 @keyframes rise {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 @utility animate-rise {
   animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;

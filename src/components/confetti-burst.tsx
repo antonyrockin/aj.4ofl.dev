@@ -148,13 +148,7 @@ export function ConfettiBurst() {
       spawn(Math.max(28, width * 0.04), height - 40, -1.35, 46);
       timers.push(
         window.setTimeout(
-          () =>
-            spawn(
-              Math.min(width - 28, width * 0.96),
-              height - 40,
-              -Math.PI + 1.35,
-              40,
-            ),
+          () => spawn(Math.min(width - 28, width * 0.96), height - 40, -Math.PI + 1.35, 40),
           200,
         ),
       );
@@ -181,10 +175,6 @@ export function ConfettiBurst() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden
-      className="pointer-events-none fixed inset-0 z-[60]"
-    />
+    <canvas ref={canvasRef} aria-hidden className="pointer-events-none fixed inset-0 z-[60]" />
   );
 }
