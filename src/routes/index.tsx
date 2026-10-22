@@ -67,7 +67,7 @@ function Index() {
         <span className="select-none font-serif text-2xl normal-case italic tracking-normal">
           aj.
         </span>
-        <nav className="flex gap-6 text-muted-foreground">
+        <nav className="select-none flex gap-6 text-muted-foreground">
           <a href="#about" className="transition-colors hover:text-foreground">
             About
           </a>
