@@ -80,7 +80,7 @@ function Index() {
       {/* hero */}
       <section
         ref={heroRef}
-        className="relative h-[160svh] min-h-[900px] motion-reduce:h-svh motion-reduce:min-h-[560px]"
+        className="select-none relative h-[160svh] min-h-[900px] motion-reduce:h-svh motion-reduce:min-h-[560px]"
       >
         <motion.div
           className="sticky top-0 flex h-svh min-h-[560px] items-end justify-center overflow-hidden"
@@ -113,19 +113,17 @@ function Index() {
           <motion.div
             aria-hidden
             style={{ x: surnameX }}
-            className="hero-surname text-outline pointer-events-none absolute inset-x-0 bottom-[10%] z-20 select-none text-center font-display uppercase leading-none"
-          >
-            Johny
-          </motion.div>
+            className="hero-surname text-outline pointer-events-none absolute inset-x-0 bottom-[10%] z-20 select-none text-center font-display uppercase leading-none before:content-['Johny']"
+          />
 
           {/* side notes */}
-          <div className="absolute bottom-6 left-6 z-20 max-w-[14rem] text-xs leading-relaxed text-muted-foreground md:bottom-8 md:left-12">
+          <div className="select-none absolute bottom-6 left-6 z-20 max-w-[14rem] text-xs leading-relaxed text-muted-foreground md:bottom-8 md:left-12">
             <span className="mb-3 block h-px w-8 bg-primary" />
             BCA, first year.
             <br />
             Learning by building.
           </div>
-          <div className="absolute bottom-6 right-6 z-20 text-right text-xs uppercase tracking-[0.2em] text-muted-foreground md:bottom-8 md:right-12">
+          <div className="select-none absolute bottom-6 right-6 z-20 text-right text-xs uppercase tracking-[0.2em] text-muted-foreground md:bottom-8 md:right-12">
             <span className="font-serif text-lg normal-case italic tracking-normal text-primary">
               A work in progress
             </span>
