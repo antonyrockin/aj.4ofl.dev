@@ -64,7 +64,9 @@ function Index() {
       <ConfettiBurst />
       {/* nav */}
       <header className="absolute inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-6 text-xs uppercase tracking-[0.2em] md:px-12">
-        <span className="font-serif text-2xl normal-case italic tracking-normal">aj.</span>
+        <span className="select-none font-serif text-2xl normal-case italic tracking-normal">
+          aj.
+        </span>
         <nav className="flex gap-6 text-muted-foreground">
           <a href="#about" className="transition-colors hover:text-foreground">
             About
@@ -186,6 +188,26 @@ function Index() {
               {EMAIL}
               <span className="block h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full" />
             </a>
+
+            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              {SOCIALS.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
+                >
+                  <span className="transition-colors group-hover:text-primary">{social.name}</span>
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  >
+                    ↗
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </Reveal>
       </section>

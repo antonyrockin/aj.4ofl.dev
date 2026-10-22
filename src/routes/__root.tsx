@@ -14,23 +14,59 @@ import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <main className="grain relative flex min-h-svh flex-col justify-between overflow-hidden bg-background px-6 py-6 text-foreground md:px-12 md:py-8">
+      <div className="glow-floor pointer-events-none absolute inset-0 opacity-80" />
+
+      {/* top bar */}
+      <header className="relative z-10 flex items-center justify-between text-xs uppercase tracking-[0.2em]">
+        <Link
+          to="/"
+          className="select-none font-serif text-2xl normal-case italic tracking-normal transition-opacity hover:opacity-80"
+        >
+          aj.
+        </Link>
+        <span className="text-muted-foreground">404</span>
+      </header>
+
+      {/* loud center content */}
+      <div className="relative z-10 my-auto flex flex-col items-center justify-center py-12 text-center">
+        <h1
+          className="select-none font-display uppercase leading-[0.78] tracking-tight text-foreground"
+          style={{ fontSize: "clamp(130px, 30vw, 360px)" }}
+        >
+          404
+        </h1>
+
+        <p className="mt-4 font-serif text-3xl italic text-primary sm:text-4xl md:text-5xl">
+          Lost in the dark.
         </p>
-        <div className="mt-6">
+
+        <p className="mt-4 max-w-sm text-xs uppercase tracking-[0.25em] text-muted-foreground sm:text-sm">
+          This page doesn't exist or moved elsewhere.
+        </p>
+
+        <div className="mt-10">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="group inline-flex items-center gap-2.5 border border-border bg-card/50 px-6 py-3.5 text-xs uppercase tracking-[0.25em] text-foreground backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
           >
-            Go home
+            <span
+              aria-hidden
+              className="inline-block transition-transform duration-200 group-hover:-translate-x-1"
+            >
+              ←
+            </span>
+            <span>Back home</span>
           </Link>
         </div>
       </div>
-    </div>
+
+      {/* footer */}
+      <footer className="relative z-10 flex justify-between text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+        <span>Antony Johny</span>
+        <span>Page not found</span>
+      </footer>
+    </main>
   );
 }
 
